@@ -52,7 +52,11 @@ class AskActivity : AppCompatActivity() {
         binding.prediction = prediction
         viewModel.insertDiagnose(this,prediction)
 
-        Log.d("cek",viewModel.getAllDiagnose(this).toString())
+        viewModel.getAllDiagnose(this)?.observe(this, Observer {
+            for (d in it){
+                Log.d("cek ", d.hasilKlasifikasi)
+            }
+        })
     }
 
     private fun ask() {

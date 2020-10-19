@@ -16,6 +16,7 @@ class AskViewModel constructor(
 ) : ViewModel() {
 
     var prediction: MutableLiveData<PredictionResponse> = MutableLiveData()
+    var allData: MutableLiveData<List<Prediction>> = MutableLiveData()
 
     fun diagnose(symptomps: Symptomps) {
         repository.diagnose(symptomps) {
@@ -28,10 +29,7 @@ class AskViewModel constructor(
         db.insertDiagnose(symptomps)
     }
 
-    fun getAllDiagnose(context: Context) {
-        val db = DbDiagnoseRepository(context)
-        db.getAllDiagnose()
-    }
+    fun getAllDiagnose(context: Context) = DbDiagnoseRepository(context).getAllDiagnose()
 
 
 }
