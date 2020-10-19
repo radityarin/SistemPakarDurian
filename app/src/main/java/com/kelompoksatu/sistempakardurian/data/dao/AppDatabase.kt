@@ -4,13 +4,16 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.kelompoksatu.sistempakardurian.data.model.Prediction
+import androidx.room.TypeConverters
+import com.kelompoksatu.sistempakardurian.data.model.Diagnosis
 import com.kelompoksatu.sistempakardurian.util.Constant.DB_NAME
+import com.kelompoksatu.sistempakardurian.util.Converters
 
-@Database(entities = [Prediction::class], version = 1)
+@Database(entities = [Diagnosis::class], version = 1)
+@TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
 
-    abstract fun diagnoseDao(): DiagnoseDao
+    abstract fun diagnoseDao(): DaoDiagnosis
 
     companion object {
         @Volatile

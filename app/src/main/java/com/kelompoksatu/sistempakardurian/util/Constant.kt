@@ -6,4 +6,6 @@ object Constant {
     const val BASE_URL = "https://durian-api.herokuapp.com/"
     const val DB_NAME:String = "db_kreen_app"
 
+    const val HAMA = "Hama"
+    const val PENYAKIT = "Penyakit"
 }

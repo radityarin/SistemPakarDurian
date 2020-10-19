@@ -2,7 +2,7 @@ package com.kelompoksatu.sistempakardurian.data.request
 
 import com.google.gson.annotations.SerializedName
 
-data class Symptomps (
+data class DiagnosisRequest (
     @SerializedName("id_diagnosa")
     var idDiagnosys: String,
     @SerializedName("jenis")

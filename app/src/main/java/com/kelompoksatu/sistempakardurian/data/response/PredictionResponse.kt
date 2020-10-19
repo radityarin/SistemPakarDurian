@@ -1,11 +1,11 @@
 package com.kelompoksatu.sistempakardurian.data.response
 
 import com.google.gson.annotations.SerializedName
-import com.kelompoksatu.sistempakardurian.data.model.Prediction
+import com.kelompoksatu.sistempakardurian.data.model.Diagnosis
 
 data class PredictionResponse(
     @SerializedName("data")
-    var prediction: Prediction,
+    var diagnosis: Diagnosis,
     @SerializedName("message")
     var message: String,
     @SerializedName("success")
