@@ -5,10 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.kelompoksatu.sistempakardurian.data.model.Prediction
-import com.kelompoksatu.sistempakardurian.data.model.PredictionDb
 import com.kelompoksatu.sistempakardurian.util.Constant.DB_NAME
 
-@Database(entities = [PredictionDb::class], version = 1)
+@Database(entities = [Prediction::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun diagnoseDao(): DiagnoseDao

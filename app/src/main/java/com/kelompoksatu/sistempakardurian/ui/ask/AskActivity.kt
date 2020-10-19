@@ -42,7 +42,6 @@ class AskActivity : AppCompatActivity() {
 
     private fun observeLiveData() {
         viewModel.prediction.observe(this, Observer {
-            Log.d("cek", it.message)
             onDataLoaded(it.prediction)
         })
     }
@@ -51,9 +50,9 @@ class AskActivity : AppCompatActivity() {
         progressBar.hide()
         expandBottomSheet()
         binding.prediction = prediction
-//        viewModel.insertDiagnose(this,prediction)
-//
-//        Log.d("cek",viewModel.getAllDiagnose(this).toString())
+        viewModel.insertDiagnose(this,prediction)
+
+        Log.d("cek",viewModel.getAllDiagnose(this).toString())
     }
 
     private fun ask() {
